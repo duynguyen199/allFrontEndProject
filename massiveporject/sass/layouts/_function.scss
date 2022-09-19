@@ -1,0 +1,57 @@
+#function {
+    .function-background {
+        background-image: url("../../img/function.png");
+        @extend .backgroundImg;
+        padding: $pd-6 0;
+        ul {
+            // display: inline-block;
+            li {
+                display: block;
+                position: relative;
+                a {
+                    color: $color-black-5;
+                    background-color: $color-grey-blur;
+                    padding: $pd-5 $pd-5 * 2;
+                    border-radius: 0;
+                    margin-right: $mr-3;
+                    font-weight: $fw-5;
+                   
+                    i {
+                        font-size: $fs-7;
+                    }
+                    &.active {
+                        background-color: $color-white-0;
+                        &::before{
+                            content: "";
+                            border-top: 15px solid #fff;
+                            border-left: 15px solid transparent;
+                            border-right: 15px solid transparent;
+                            position: absolute;
+                            bottom: -15px;
+                            z-index: 9;
+                        }
+                    }
+                }
+        
+            }
+        }
+        .tab-content{
+            .tab-pane{
+                span{
+                    letter-spacing: 2px;
+                    @include styleText($color-black-1,$fs-2 + 1,$fw-5);
+                    line-height: 30px;
+
+                }
+                h2{
+                    font-weight: $fw-5;
+                    letter-spacing: 2px;
+                    margin-bottom: $mr-6;
+                }
+                p{
+                    letter-spacing: 2px;
+                }
+            }
+        }
+    }
+}

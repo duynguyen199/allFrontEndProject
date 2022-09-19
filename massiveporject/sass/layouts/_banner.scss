@@ -1,0 +1,31 @@
+.full-banner{
+    
+    background-image: url('../../img/banner.png');
+    @extend .backgroundImg;
+    position: relative;
+    height: 700px;
+    .banner-title{
+        @include positionAbsulute(absolute,50%,none,none,50%);
+        transform: translate(-50%,-50%);
+        width: $width-0;
+        h1{
+            @include styleText($color-white-0,$fs-8 , $fw-5);
+            margin-bottom: 0.5rem;
+            line-height: normal;
+            text-align: center;
+            letter-spacing: 5px;
+            width: $width-0
+        }
+        h3{
+            @include styleText($color-white-0, $fs-4 + 2, $fw-5);
+            line-height: normal;
+            letter-spacing: 6px;
+            width: $width-0;
+            text-align: center;
+        }
+      
+    }
+    .banner-overlay{
+        background-color: $color-black-trans;
+    }
+}

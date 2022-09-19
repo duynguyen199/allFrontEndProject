@@ -1,0 +1,154 @@
+header {
+    @media screen and (max-width: 1199px) and (min-width: 768px) {
+        .myNavbar {
+            .myNavbar__right {
+                #img-fixed {
+                    img {
+                        top: -55px;
+                        left: -40px;
+                    }
+                }
+            }
+            .myNavbar__left {
+                // max-width: unset;
+
+                .navbar-nav {
+                    padding: auto;
+                    margin: auto;
+                    .header-items {
+                        margin-left: auto;
+                        .header-links {
+                            padding: $pd-1 $pd-1 - 2;
+                        }
+                    }
+                    .link {
+                        .link-content {
+                            min-width: 700px;
+                        }
+                    }
+                    .shortCode {
+                        .shortCode-content {
+                            min-width: 700px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.creative {
+    .creative-content {
+        .creative-title {
+            .tab-content {
+                @media screen and (min-width: 992px) and (max-width: 1039px) {
+                    min-height: 750px;
+                    .creative-item2 {
+                        left: 25%;
+                        overflow: hidden;
+                    }
+                    .creative-item3 {
+                        bottom: 45%;
+                        left: 25%;
+                        top: unset;
+                        overflow: hidden;
+                    }
+                    .creative-item4 {
+                        top: unset;
+                        bottom: 75%;
+                        right: unset;
+                        left: 50%;
+                        overflow: hidden;
+                    }
+                    .creative-item5 {
+                        top: 30%;
+                        overflow: hidden;
+                    }
+                    .creative-item6 {
+                        left: 50%;
+                        top: 30%;
+                        overflow: hidden;
+                    }
+                    .creative-item7 {
+                        position: absolute;
+                        top: unset;
+                        bottom: 45%;
+                        right: 0;
+                        left: unset;
+                        overflow: hidden;
+                    }
+                    .creative-item8 {
+                        bottom: 75%;
+                        right: 0;
+                        top: unset;
+                        left: unset;
+                        overflow: hidden;
+                    }
+                }
+            }
+        }
+    }
+}
+.creative {
+    .creative-content {
+        .creative-title {
+            .tab-content {
+                @media screen and (min-width: 1040px) and (max-width: 1199px) {
+                    min-height: 750px;
+                    //
+                    .creative-item2 {
+                        left: 25%;
+                        overflow: hidden;
+                    }
+                    .creative-item3 {
+                        bottom: 48%;
+                        left: 25%;
+                        top: unset;
+                        overflow: hidden;
+                    }
+                    //
+                    .creative-item4 {
+                        top: unset;
+                        bottom: 74%;
+                        right: unset;
+                        left: 50%;
+                        overflow: hidden;
+                    }
+                    .creative-item5 {
+                        top: 26%;
+                        overflow: hidden;
+                    }
+                    .creative-item6 {
+                        left: 50%;
+                        top: 26%;
+                        overflow: hidden;
+                    }
+                    //
+                    .creative-item7 {
+                        position: absolute;
+                        top: unset;
+                        bottom: 48%;
+                        right: 0;
+                        left: unset;
+                        overflow: hidden;
+                    }
+                    //
+                    .creative-item8 {
+                        bottom: 74%;
+                        right: 0;
+                        top: unset;
+                        left: unset;
+                        overflow: hidden;
+                    }
+                }
+            }
+        }
+    }
+}
+.team-promos {
+    @media screen and (max-width: 992px) {
+        .team-promos-info {
+          
+            margin-left: $mr-1!important;
+        }
+    }
+}

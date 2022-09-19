@@ -1,0 +1,52 @@
+.creative {
+    .creative-content {
+        .creative-title {
+            .tab-content {
+                @media screen and (min-width: 1200px) and (max-width:1279px) {
+                    min-height: 500px;
+                    .creative-item2 {
+                        left: 25%;
+                        overflow: hidden;
+                    }
+                    .creative-item3 {
+                        bottom: 8%;
+                        left: 25%;
+                        top: unset;
+                        overflow: hidden;
+                    }
+                    .creative-item4 {
+                        top:unset; 
+                        bottom: 54%;
+                        right: unset;
+                        left: 50%;
+                        overflow: hidden;
+                    }
+                    .creative-item5 {
+                        top: 46%;
+                        overflow: hidden;
+                    }
+                    .creative-item6 {
+                        left: 75%;
+                        top: 46%;
+                        overflow: hidden;
+                    }
+                    .creative-item7 {
+                        position: absolute;
+                        top: unset;
+                        bottom: 8%;
+                        right: 25%;
+                        left: unset; 
+                        overflow: hidden;   
+                    }
+                    .creative-item8 {
+                        bottom: 54%;
+                        right: 0;
+                        top: unset;
+                        left: unset;
+                        overflow: hidden;
+                    }
+                }
+            }
+        }
+    }
+}

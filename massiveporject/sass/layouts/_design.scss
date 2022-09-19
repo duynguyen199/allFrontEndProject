@@ -1,0 +1,54 @@
+.design {
+    .design-content {
+        width: $width-0;
+        padding: $pd-6 0;
+        .design-bot {
+            .desgin-col {
+                padding: 0 $pd-4;
+                .design-item {
+                    position: relative;
+                    padding: $pd-4;
+                    border: 1px solid $color-grey-7;
+                    border-radius: $br-0;
+
+                    &:hover {
+                        .design-icon {
+                            background-color: $color-gold-0;
+                        }
+                    }
+                    .design-icon {
+                        transition: all 0.5s ease-in-out;
+                        @include positionAbsulute(absolute, -30px, none, none, 30px);
+                        width: $width-1;
+                        height: $height-5;
+                        text-align: center;
+                        border-radius: $br-0;
+                        background: $color-black-5;
+                        box-shadow: 0 0 0 10px $color-white-0;
+                        line-height: 60px;
+                        padding: 0 0 $pd-5 0;
+
+                        i {
+                            color: $color-white-0;
+                            font-size: $fs-6;
+                            line-height: 60px;
+                        }
+                    }
+                    .design-tlt {
+                        margin: $mr-5 0;
+                        h4 {
+                            letter-spacing: 1px;
+                            @include styleText($color-black-4, $fs-4, $fw-5);
+                        }
+                    }
+                    .design-text {
+                        p {
+                            color: $color-black-1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+

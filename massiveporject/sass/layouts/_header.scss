@@ -1,0 +1,82 @@
+header {
+    z-index: 2;
+    position: fixed;
+    color: $color-white-0;
+    width: 100%;
+    margin: auto;
+    .myNavbar {
+        width:$width-0;
+        height: 100%;
+       
+        .myNavbar__left {
+            width: $width-0;
+            // flex: wrap;
+            .navbar-nav {
+                // max-height: $height-2;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                width: $width-0;
+              
+                .header-items {
+                    display: inline-block;
+                    margin-left: $mr-2 + 1;
+                    position: relative;
+
+                    .overlay {
+                        transition: all 0.5s ease-in-out;
+                        display: none;
+                        min-width: $width-0;
+                        // width: $width-0;
+                        margin: 0;
+                        padding: 0;
+                        list-style: none;
+                        white-space: nowrap;
+                        background-color: $color-white-0;
+                        @include positionAbsulute(absolute, 95px, unset, unset, -28px);
+                        .dropdown-item {
+                            &:hover {
+                                background-color: $color-gold-0;
+                            }
+                        }
+                    }
+                    &:hover {
+                        .overlay {
+                            display: block;
+                            z-index: 100;
+                        }
+                    }
+                    .header-links {
+                        @include styleText($color-white-0, $fs-2, $fw-0);
+                        padding: $pd-1 $pd-2;
+                        outline: none;
+                        display: inline;
+                        transition: all 0.5s;
+                        line-height: 100px;
+                        // line-height: 100%;
+                        @include hoverText;
+                        text-decoration: none;
+                    }
+                }
+                .header-items.active {
+                    .header-links {
+                        color: $color-gold-0;
+                    }
+                }
+                .cart-info {
+                    display: flex;
+                    align-items: center;
+                    text-align: left;
+                    i{
+                        @include hoverText;
+                    }
+                }
+            }
+        }
+        .myNavbar__right{
+            width: $width-0;
+            // flex: wrap;
+        }
+    }
+}

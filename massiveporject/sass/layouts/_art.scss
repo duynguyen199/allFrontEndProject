@@ -1,0 +1,30 @@
+.art{
+    margin-top: $mr-8;
+    .art-background{
+        padding: $pd-7 0;
+        background-image: url('../../img/art.png');
+        @extend .backgroundImg;
+        .art-content{
+            h4{
+                font-size: $fs-3 + 1;
+                letter-spacing: 3px;
+                @include styleText($color-gold-0,$fs-3 + 1, $fw-5);
+            }
+            h1{
+                @include styleText($color-white-0,$fs-7,$fw-5);
+                line-height: 1.5;
+            }
+            .art-btn{
+                margin-top: $mr-6;
+                button{
+                    transition: all .5s;
+                    @include button($pd-2 + 3 $pd-4,$color-gold-0,$color-white-0, $fs-2 + 1,$fw-5,$color-white-0);
+                    &:hover{
+                        color: $color-black-5;
+                    }
+                }
+            }
+           
+        }
+    }
+}

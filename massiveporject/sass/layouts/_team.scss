@@ -1,0 +1,80 @@
+.team {
+    .team-content {
+        .team-member {
+            position: relative;
+            &:hover{
+                .team-hover{
+                    opacity: 1;
+                    .team-top{
+                        top: 35%;
+                    }
+                    .team-bot{
+                        bottom:10%;
+                        opacity: 1;
+                    }
+                }
+            }
+            .team-img{
+                img{
+                    width: $width-0;
+                    height: auto;
+                }
+            }
+            .team-img .team-intro {
+                @include positionAbsulute(absolute, unset, 11%, 0, unset);
+                background-color: $color-black-overlay;
+                width: 95%;
+                height: auto;
+                text-align: right;
+                color: $color-white-0;
+                padding-right: $pd-2;
+                h5{
+                    margin: $mr-0 - 1 0;
+                    letter-spacing: 2px;
+                    font-size: $fs-3 + 1;
+                }
+                span {
+                    color: $color-black-blur;
+                    font-size: $fs-3 - 1;
+                    padding-bottom: $pd-1;
+                }
+            }
+            .team-hover {
+                @include card;
+                @include positionAbsulute(absolute,0,0,unset,0);
+                width: $width-0;
+                .team-top {
+                    @include positionAbsulute(absolute,0,unset,unset,0);
+                    @include teamAndCreative($width-0 - 1,unset,0 $pd-1,$mr-1 0);
+                    transform: translateY(-55%);
+                    h4{
+                        margin-bottom: $mr-2;
+                        letter-spacing: 4px;
+                        text-transform: uppercase;
+                        @include styleText($color-black-5,$fs-3,$fw-5);
+                    }
+                    p{
+                        margin-bottom: 0;
+                        line-height: 30px;
+                        @include styleText($color-black-1,$fs-3,$fw-5);
+                    }
+                }
+                .team-bot{
+                    @include positionAbsulute(absolute,unset,12%,unset,3%);
+                    width: 100%;
+                    transition: all .3s .2s;
+                    transform: translateY(45%);
+                    text-align: center;
+                    opacity: 0;
+                    font-size: $fs-7;
+                    a{
+                        text-decoration: none;
+                        color: $color-black-5;
+                        margin: 0 $mr-1;
+                        font-size: $fs-3 + 1;
+                    }
+                }
+            }
+        }
+    }
+}

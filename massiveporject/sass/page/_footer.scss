@@ -1,0 +1,97 @@
+#footer {
+    .primary-footer {
+        padding: $pd-9 0;
+        background-color: $color-black-5;
+        p{
+            color: $color-grey-3;
+            margin-bottom: $mr-5;
+            line-height: 30px;
+        }
+        h5 {
+            letter-spacing: 1px;
+            @include styleText($color-white-0, $fs-2 + 1, $fw-5);
+            line-height: 1.5;
+        }
+        ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            .footer-img {
+                padding: $pd-0 + 3 $pd-0 + 3;
+                a {
+                    width: 40x;
+                    height: 40px;
+                    margin: 0 10px 10px 0;
+                    img {
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+            }
+            .footer-content {
+                border-bottom: 1px solid $color-grey-3;
+                color: $color-grey-3;
+                transition: all .5s;
+                @include hoverText;
+                a {
+                    line-height: 45px;
+                    &::before {
+                        display: inline-block;
+                        content: '';
+                        width:10px;
+                        height: 10px;
+                        border-bottom: 5px solid transparent;
+                        border-top: 5px solid transparent;
+                        border-left: 5px solid $color-grey-3;
+                    }
+                   
+                }
+            }
+        }
+    }
+    .secondary-footer{
+        display: inline-block;
+        width: 100%;
+        padding: 35px 0;
+        border-top: 1px solid $color-black;
+        background: $color-black-6;
+        font-weight: normal;
+        .footer-copy{
+            span{
+                color:$color-black-grey;
+                margin-top: $mr-1;
+                .footer-link{
+                    color: $color-white-0;
+                    transition: all .5s;
+               
+                    &:hover{
+                        color: $color-gold-0;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+        .footer-social{
+            a{
+                width: 35px;
+                height: 35px;
+                text-align: center;
+                border: 1px solid $color-grey-5;
+                border-radius: $br-1;
+                line-height: 35px;
+                margin-left: $mr-3;
+                transition: all .5s;
+                @include styleText($color-grey-5,$fs-5 + 2,$fw-5);
+                &:hover{
+                    color: $color-white-0;
+                    border: 1px solid transparent;
+                    background: $color-grey-5;
+                }
+                i{
+                    margin: $mr-0 $mr-1;
+
+                }
+            }
+        }
+    }
+}

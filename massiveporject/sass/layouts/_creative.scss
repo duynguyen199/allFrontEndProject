@@ -1,0 +1,77 @@
+.creative {
+    .creative-content {
+       
+        .creative-title {
+            width: 100%;
+            ul {
+                display: flex;
+                justify-content: center;
+                margin: 0;
+                padding: 0;
+                list-style-type: none;
+                li {
+                    display: inline-block;
+                    a {
+                        @include styleText($color-black-11, $fs-3 -1, $fw-5);
+                        margin: 0 $mr-2;
+                        letter-spacing: 3px;
+                        text-transform: uppercase;
+                        text-decoration: none;
+                        transition: all 0.5s;
+                    }
+                }
+                @include hoverText;
+                text-decoration: none;
+                li.active a {
+                    color: $color-black-5;
+                    text-decoration: none;
+                }
+            }
+
+            .tab-content {
+                position: relative;
+                min-height: 700px;
+                margin: $mr-6 0;
+                width: 100%;
+                .creative-item1 {
+                    @include positionAbsulute(absolute, 0, unset, unset, 0);
+                    @extend .creative-item;
+                }
+                .creative-item2 {
+                    // @include positionAbsulute(absolute,0, unset, unset, 319px);
+                    position: absolute;
+                    top: 0;
+                    left: 319px;
+                    @extend .creative-item;
+                }
+                .creative-item3 {
+                    @include positionAbsulute(absolute, 0, unset, unset, 639px);
+                    @extend .creative-item;
+                }
+                .creative-item4 {
+                    @include positionAbsulute(absolute, 0, unset, unset, 959px);
+                    @extend .creative-item;
+                }
+                .creative-item5 {
+                    @include positionAbsulute(absolute, 240px, unset, unset, 0);
+                    @extend .creative-item;
+                }
+                .creative-item6 {
+                    @include positionAbsulute(absolute, 240px, unset, unset, 319px);
+                    @extend .creative-item;
+                }
+                .creative-item7 {
+                    @include positionAbsulute(absolute, 240px, unset, unset, 639px);
+                    @extend .creative-item;
+                }
+                .creative-item8 {
+                    @include positionAbsulute(absolute, 240px, unset, unset, 959px);
+                    @extend .creative-item;
+                }
+            }
+        }
+    }
+}
+.pd-column {
+    padding: 0;
+}

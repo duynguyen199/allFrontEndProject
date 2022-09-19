@@ -1,0 +1,47 @@
+.carousel {
+    padding: $pd-6 0;
+    #carousel-content {
+        .carousel-indicators {
+            li {
+                background-color: $color-grey-10;
+                border-radius: $br-1;
+                height: 8px;
+                width: 8px;
+                margin: 0 $mr-1;
+                &.active:hover{
+                    color: #EAEAEA;
+                }
+            }
+        }
+        .carousel-inner {
+            margin: $mr-3;
+            width: 75%;
+            margin: auto;
+            .carousel-item {
+                .circle{
+                    height: auto;
+                    border-radius: $br-1;
+                    margin: auto;
+                }
+                p {
+                    @include styleText($color-black-1, $fs-3 + 1, $fw-5);
+                    margin: $mr-5 0;
+                    line-height: 30px;
+                }
+                .carousel-writer {
+                    margin-top: $mr-1;
+                    h4 {
+                        letter-spacing: 2px;
+                        text-transform: uppercase;
+                        @include styleText($color-black-5, $fs-2 + 1, $fw-0);
+                    }
+                    span {
+                        display: block;
+                        color: #7f7f7f;
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+}

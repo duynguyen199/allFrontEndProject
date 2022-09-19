@@ -1,0 +1,10 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Source Sans Pro', sans-serif;
+    @include styleText($color-black-0,$fs-3,$fw-0);
+    color: $color-black-0;
+}

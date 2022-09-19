@@ -1,0 +1,88 @@
+// .col-12{
+//     width: 100%;
+// }
+$number: 1;
+
+// 1<=$number<13
+// @for $number from 1 to 13 {
+//     .col-#{$number}{
+//         width: 100% *$number / 12;
+//         // col-6: width:50% *6/12=100% *$number/12
+//     }
+//     $number: $number+1;
+// }
+
+// 1<=$number<=12
+// @for $number from 1 through 12 {
+//     .col-#{$number} {
+//         width: 100% * $number / 12;
+//         // col-6: width:50% *6/12=100% *$number/12
+//     }
+//     $number: $number + 1;
+// }
+
+@while $number<13 {
+    .col-#{$number} {
+        width: 100% * $number / 12;
+        // col-6: width:50% *6/12=100% *$number/12
+    }
+    $number: $number + 1;
+}
+$icons: (
+    "book": "\f2b9",
+    "card": "\f2bb",
+);
+// .icon-book::before{
+//     content:"\f2b9";
+// }
+@each $name, $code in $icons {
+    .icon-#{$name}::before {
+            content: $code;
+        }
+    }
+$size: 40px, 50px, 80px;
+@each $size in $size {
+    .icon-#{$size} {
+        font-size: $size;
+        height: $size;
+        width: $size;
+    }
+}
+
+@mixin arrow($size,$direction,$color) {
+    border-style: solid;
+    border-color: transparent;
+    display: inline-block;
+    border-width: $size;
+    @if $direction == up{
+        border-bottom-color: $color;
+    }@else if $direction == down{
+        border-top-color: $color;
+    }@else if $direction== right{
+        border-left-color: $color;
+    }@else if $direction == left{
+        border-right-color: $color;
+    }@else{
+        @error "Unknown Direction: #{$direction}";
+    }
+}
+.up{
+    @include arrow(20px,up,red);
+}
+.down{
+    @include arrow(20px,down,yellow);
+}
+.right{
+@include arrow(20px,right,blue);
+}
+.left{
+    @include arrow(20px,left,green);
+}
+
+@function parseRem($default,$var){
+    $rem:$val / $default;
+    @return #{$rem}rem;
+}
+h2{
+    font-size: parseRem(16,32 );
+}

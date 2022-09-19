@@ -1,0 +1,93 @@
+.creative-item {
+    width: 100%;
+    &:hover{
+        .creative-ad{
+            .creative-hover{
+                opacity: 1;
+                .creative-btn{
+                    top:40%;
+                    margin-top: -55px;
+                    opacity:1;
+                    transform: translateY(-10%);
+                }
+                .creative-description{
+                    bottom: 10%;
+                    margin-bottom: -90px;
+                    opacity: 1;
+                    // left: 28%;
+                    width: $width-0;
+                    margin: auto;
+                    text-align: center;
+                    transform: translateY(50%);
+                }
+            }
+        }
+    }
+    .creative-ad {
+        position: relative;
+        width:$width-0;
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+        .creative-hover {
+            @include positionAbsulute(absolute, 0, 0, 0, 0);
+            @include card;
+            .creative-btn {
+                @include positionAbsulute(absolute,0, unset, unset, unset);
+                @include teamAndCreative($width-0,$fs-7 - 1, $pd-1 $pd-2,auto);
+                transform: translateY(-30%);
+                transition: all .2s;
+                a {
+                    text-align: center;
+                    color: $color-black-5;
+                    text-decoration: none;
+                }
+            }
+            .creative-description {
+                @include positionAbsulute(absolute, unset, 0, unset, unset);
+                @include teamAndCreative($width-0,unset,$pd-5,auto);
+                transition: all .2s;
+                transform: translateY(-22%);
+            
+                h4 {
+                    margin-bottom: $mr-3;
+                    letter-spacing: 4px;
+                    text-transform: uppercase;
+                    font-size: $fs-3 + 1;
+                    a{
+                        color: $color-grey-8;
+                        transition: all .2s;
+                        text-decoration: none;
+
+                    }
+                    &:hover{
+                        a{
+                            color: $color-gold-0;
+                        }
+                    }
+                }
+                p {
+                    @include styleText($color-grey-8, $fs-1, $fw-5);
+                    margin-bottom: 30%;
+                    letter-spacing: 3px;
+                    text-transform: uppercase;
+                    a{
+                        color: $color-grey-8;
+                        transition: all .5s;
+                        text-decoration: none;
+                    }
+                    &:hover{
+                        a{
+                            color: $color-gold-0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.partners{
+    padding: $pd-6 0;
+}

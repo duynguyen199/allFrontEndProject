@@ -1,0 +1,98 @@
+.blog{
+    padding:$pd-6 0;
+    .blog-content{
+        .blog-img{
+            position: relative;
+            img{
+                width: $width-0
+            }
+            .blog-slogan{
+                @include positionAbsulute(absolute,unset,0,unset,0);
+                width: $width-0;
+                padding: $pd-1;
+                color: white;
+                background: $color-black-overlay;
+                font-size: $fs-1;
+            }
+        }
+        .blog-info{
+            height: 309px;
+            padding: $pd-4 0;
+            .blog-txt{
+                list-style: none;
+                padding: 0;
+                li{
+                    display: inline-block;
+                    margin-right: 10px;
+                   a{
+                        text-decoration: none;
+                        @include styleText($color-grey-9,$fs-1,$fw-5);
+                        color: #909090;
+                        font-size: 12px;
+                        letter-spacing: 1px;
+                        transition: all .5s;
+                        @include hoverText;
+                   }
+                }
+            }
+            h4{
+                margin-bottom: $mr-1;
+                @include styleText($color-black-4,$fs-4,normal);
+                line-height: 1.5;
+                transition: all .5s;
+                @include hoverText;
+            }
+            .blog-date{
+                height: auto;
+                margin-right: 0;
+                margin-bottom: 25px;
+                padding-top: 0;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+                @include styleText($color-grey-9,$fs-1,normal);
+                transition: all .5s;
+                @include hoverText;
+                &::after{
+                    position: absolute;
+                    top: 30px;
+                    left: 0;
+                    width: 60px;
+                    height: 1px;
+                    content: "";
+                }
+                a{
+                    color: $color-grey-9;
+                    text-decoration: none;
+                    transition: all .5s;
+                    @include hoverText;
+                    &::after{
+                        padding-right: 5px;
+                        padding-left: 10px;
+                        content: "|";
+                    }
+                }
+            }
+            p{
+                margin: 0 0 $mr-5;
+                color: $color-black-1;
+                line-height: $mr-5;
+            }
+            .btn-blog-read-more{
+                color: $color-black-1;
+                letter-spacing: 1px;
+                transition: all .3s;
+                font-size: $fs-2;
+                padding: 0;
+                position: relative;
+                &:hover{
+                    color:$color-black-5;
+                }
+                i{
+                position: absolute;
+                top: 2px;
+                margin-left: 10px;
+                font-weight: bold;}
+            }
+        }
+    }    
+}

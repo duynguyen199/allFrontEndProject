@@ -1,0 +1,22 @@
+.lift-off{
+position: fixed;
+right: 20px;
+bottom: 20px;
+width: 40px;
+height: 40px;
+
+transition: all .3s;
+text-align: center;
+color: $color-white-0;
+background:$color-black-overlay;
+line-height: 40px;
+}
+.lift-off_hide{
+    visibility: hidden;
+    transform: translateY(0);
+    opacity: 0;
+}
+.lift-off_show {
+    transform: translateY(0);
+    opacity: 1;
+}

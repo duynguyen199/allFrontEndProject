@@ -1,0 +1,31 @@
+.team-promos{
+    background-color: $color-grey-1;
+    margin-top: $mr-8;
+    .team-promos-info{
+        margin-top:$mr-3;
+        margin-left: $mr-6;
+        // margin: auto;
+        h4{
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin: 0 0 $mr-1 0;
+            line-height: 1.5;
+            @include styleText($color-black-4,$fs-4,$fw-5);
+        
+            span{
+                color:$color-gold-0;
+            }
+        }
+        p{
+            margin-top: 10px;
+            color: #7e7e7e;
+        }
+    }
+    .team-promos-btn{
+        button{
+            @include button($pd-2 + 3 $pd-4,$color-black-5,$color-white-0,$fs-2 - 1, $fw-5,$color-gold-0);
+            margin-right: $mr-6;
+            transition: all .5s;
+        }
+    }
+}

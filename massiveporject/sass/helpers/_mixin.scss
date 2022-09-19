@@ -1,0 +1,45 @@
+@mixin styleText($color,$fs,$fw) {
+    color: $color;
+    font-size: $fs;
+    font-weight: $fw;
+}
+
+
+@mixin positionAbsulute($position,$top,$bottom,$right,$left){
+    position: $position;
+    top:$top;
+    bottom:$bottom;
+    right:$right;
+    left:$left;
+}
+@mixin teamAndCreative($width,$font-size,$padding,$margin){
+    opacity: 1;
+    text-align: center;
+    width: $width;
+    font-size: $font-size;
+    padding: $padding;
+    margin: $margin;
+}
+@mixin card {
+    // margin: auto;
+    transition: all .3s;
+    opacity: 0;
+    border: 20px solid $color-black-trans;
+    background-color: $color-white-tran;
+    height: 100%;
+}
+@mixin button($padding,$background,$color,$font-size,$font-weight,$background-hover) {
+    padding: $padding;
+    background: $background;
+    color:$color;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    &:hover{
+        background: $background-hover;
+    }
+}
+@mixin  hoverText {
+    &:hover{
+        color: $color-gold-0;
+    }
+}

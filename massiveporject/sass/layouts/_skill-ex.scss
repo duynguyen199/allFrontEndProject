@@ -1,0 +1,77 @@
+.skills-ex {
+    .skill-ex-background {
+        background-image: url("../../img/skill-ex.png");
+        @extend .backgroundImg;
+        // overflow: hidden;
+        width: $width-0 !important;
+        margin-bottom: $mr-8;
+        .skill-ex-content {
+            position: relative;
+            width: $width-0;
+            padding: $pd-6 0;
+            .skill-ex-overlay-left {
+                @include positionAbsulute(absolute, 0, none, 0, none);
+                width: $width-4;
+                height: 100%;
+                content: "";
+                background: $color-black-overlay;
+            }
+            .skill-ex-title {
+                position: relative;
+                height: $height-2;
+                width: $width-0;
+                h3 {
+                    width: $width-0;
+                    @include positionAbsulute(absolute, 50%, none, none, 50%);
+                    transform: translate(-50%, -50%);
+                    margin: 0 0 $mr-5 0;
+                    color: $color-white-0;
+                    font-weight: $fw-5;
+                    line-height: 1.5;
+                    letter-spacing: 6px;
+                }
+            }
+            .skill-ex-text {
+                padding: 0 $pd-4;
+                h4 {
+                    @include styleText($color-white-0, $fs-4, $fw-5);
+                    letter-spacing: 2px;
+                    margin: 0 0 $mr-5 0;
+                    line-height: 1.5;
+                }
+                p {
+                    color: $color-white-0;
+                    line-height: $fs-6;
+                    margin: 0 0 $mr-5;
+                }
+                .skill-pd{
+                    padding-top: $pd-4;
+                    .skill-ex-language {
+                        overflow: visible;
+                        height: $height-6;
+                        margin-top: $mr-1;
+                        margin-bottom: $mr-6;
+                        letter-spacing: 1px;
+                        border-radius: 0;
+                        background: $color-black-10;
+                        box-shadow: none;
+                        font-weight: $fw-0;
+                        .skill-ex-bar-80 {
+                           @extend .skill-ex-web;
+                           width: $width-80;
+                        }
+                        .skill-ex-bar-90 {
+                            @extend .skill-ex-web;
+                            width: $width-90;
+                         }
+                         .skill-ex-bar-75 {
+                            @extend .skill-ex-web;
+                            width: $width-75;
+                         }
+                    }
+                }
+            
+            }
+        }
+    }
+}
